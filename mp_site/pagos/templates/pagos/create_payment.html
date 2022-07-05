@@ -1,0 +1,19 @@
+<form action="{{ form.action }}" method="post">
+    {% csrf_token %}
+    <p>nombre:</p>
+    {{form.name}}
+    <p>apellido:</p>
+    {{form.apellido}}
+    <p>telefono:</p>
+    {{form.number}}
+    <p>email:</p>
+    {{form.email}}
+    <p>total:</p>
+    {{form.total}}
+
+    {{form.variant.as_hidden}}
+    {{form.currency.as_hidden}}
+    
+
+    <p><input type="submit" value="Create payment"/></p>
+</form>
